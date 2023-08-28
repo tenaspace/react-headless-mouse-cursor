@@ -2,10 +2,11 @@ import React, { ReactNode, useRef, useState } from 'react'
 import { useEventListener } from './hooks'
 
 interface IMouseCursor {
+  showDefaultCursor?: boolean
   children: ({ mouseOverValue }: { mouseOverValue?: string }) => ReactNode
 }
 
-const MouseCursor = ({ children }: IMouseCursor) => {
+const MouseCursor = ({ showDefaultCursor = true, children }: IMouseCursor) => {
   const [isMoved, setIsMoved] = useState<boolean>(false)
 
   const [mouseOverValue, setMouseOverValue] = useState<string>(``)
@@ -41,14 +42,16 @@ const MouseCursor = ({ children }: IMouseCursor) => {
   })
   return (
     <>
-      <style>
-        {`
+      {!showDefaultCursor && (
+        <style>
+          {`
           html,
           html * {
             cursor: none !important;
           }
         `}
-      </style>
+        </style>
+      )}
       <div
         ref={ref}
         style={{
