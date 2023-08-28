@@ -53,6 +53,8 @@ const MouseCursor = ({ children }: IMouseCursor) => {
         ref={ref}
         style={{
           position: `fixed`,
+          top: 0,
+          left: 0,
           zIndex: 9999,
           pointerEvents: `none`,
           display: isMoved ? `block` : `none`,
