@@ -64,4 +64,4 @@ const MouseCursor = ({ children }: IMouseCursor) => {
   )
 }
 
-export const HeadlessAccordion = MouseCursor
+export const HeadlessMouseCursor = MouseCursor
