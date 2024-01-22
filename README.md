@@ -1,6 +1,6 @@
 # @tenaspace/react-headless-mouse-cursor
 
-This is an unstyled React component helping you to easy to make the Mouse Cursor with your style.
+This is an unstyled React component that helps you to easily make the Mouse Cursor with your style.
 
 ## Demo
 
